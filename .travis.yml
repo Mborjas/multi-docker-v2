@@ -14,9 +14,9 @@ after_success:
   - docker build -t borjas/multi-nginx ./nginx
   - docker build -t borjas/multi-server ./server
   - docker build -t borjas/multi-worker ./worker
-  # Log in to the docker CLI :
+  # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take those images and push them to docker hub :
+  # Take those images and push them to docker hub
   - docker push borjas/multi-client
   - docker push borjas/multi-nginx
   - docker push borjas/multi-server
